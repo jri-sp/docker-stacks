@@ -98,3 +98,5 @@ RUN pip install kernda --no-cache && \
     pip uninstall kernda -y
 
 USER $NB_USER
+
+COPY work /home/$NB_USER/work
