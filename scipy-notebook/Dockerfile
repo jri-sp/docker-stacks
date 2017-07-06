@@ -101,3 +101,4 @@ USER $NB_USER
 
 COPY work /home/$NB_USER/work
 RUN chown -R jovyan:users /home/$NB_USER/work
+RUN chmod -R 550 /home/$NB_USER/work/correction
