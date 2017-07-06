@@ -97,8 +97,10 @@ RUN pip install kernda --no-cache && \
     kernda -o -y /usr/local/share/jupyter/kernels/python2/kernel.json && \
     pip uninstall kernda -y
 
-USER $NB_USER
-
 COPY work /home/$NB_USER/work
 RUN chown -R jovyan:users /home/$NB_USER/work
 RUN chmod -R 550 /home/$NB_USER/work/correction
+
+USER $NB_USER
+
+
